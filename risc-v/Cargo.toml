@@ -1,0 +1,16 @@
+[package]
+name = "risc-v"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+lazy_static = "1.4.0"
+
+[dependencies.sdl2]
+version = "0.36.0"
+features = ["static-link", "bundled", "use-pkgconfig"]
+optional = true
+
+[features]
+default = ["multimedia"]
+multimedia = ["dep:sdl2"]
